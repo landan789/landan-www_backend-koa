@@ -1,5 +1,5 @@
 
-class User {
+class UserController {
   get(ctx:any){
     ctx.body = 'GET user!'
   }
@@ -16,6 +16,4 @@ class User {
   }
 }
 
-let oUser = new User();
-
-export default oUser;
+export default UserController;

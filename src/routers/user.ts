@@ -1,7 +1,8 @@
 import Router from 'koa-router';
-import oUserController from './../controllers/user';
+import UserController from './../controllers/user';
 
 let oUserRouter = new Router();
+let oUserController = new UserController();
 
 oUserRouter.get('/', async ( ctx )=>{
   oUserController.get(ctx);
