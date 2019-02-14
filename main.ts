@@ -2,11 +2,9 @@ import cluster from 'cluster';
 import os from 'os';
 import Koa from 'koa';
 
-import { HTTP } from './configs/index';
+import { HTTP } from './src/configs/index';
 
-console.log(HTTP);
-
-const intCPULength = 4;
+const intCPULength = os.cpus().length;
 
 
 if (cluster.isMaster) {
@@ -21,10 +19,10 @@ if (cluster.isMaster) {
   const main = new Koa();
 
   main.use(ctx => {
-    ctx.body = 'HIHIHHIHIHI'
+    ctx.body = HTTP.BODY;
   });
   
-  main.listen(3000, () => {
+  main.listen(HTTP.PORT, () => {
     console.log('server is running')
   });
 }
