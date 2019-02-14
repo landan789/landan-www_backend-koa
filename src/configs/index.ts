@@ -1,3 +1,3 @@
-import CONFIG_HTTP from './../configs/HTTP';
+import C_HTTP from './../configs/HTTP';
 
-export { CONFIG_HTTP as HTTP };
+export { C_HTTP as HTTP };

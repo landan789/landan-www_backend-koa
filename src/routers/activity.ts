@@ -1,8 +1,8 @@
 import Router from 'koa-router';
 
-let activity = new Router();
+let oActivity = new Router();
 
-activity.get('/', async ( ctx )=>{
+oActivity.get('/', async ( ctx )=>{
   ctx.body = 'GET activity!'
 }).post('/', async ( ctx )=>{
   ctx.body = 'POST activity!'
@@ -12,4 +12,4 @@ activity.get('/', async ( ctx )=>{
   ctx.body = 'DELETE activity!'
 });
 
-export default activity;
+export default oActivity;

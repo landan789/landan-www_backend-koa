@@ -1,9 +1,11 @@
 import Router from 'koa-router';
 
-import user from './user';
-import activity from './activity';
+import oUser from './user';
+import oActivity from './activity';
 
-let router = new Router();
+let oRouter = new Router();
 
-router.use('/', user.routes());
-router.use('/', activity.routes());
+oRouter.use('/user', oUser.routes(), oUser.allowedMethods());
+oRouter.use('/activity', oActivity.routes(), oActivity.allowedMethods());
+
+export default oRouter;

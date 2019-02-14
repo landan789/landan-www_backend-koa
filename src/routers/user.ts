@@ -1,8 +1,8 @@
 import Router from 'koa-router';
 
-let user:any = new Router();
+let oUser = new Router();
 
-user.get('/', async ( ctx )=>{
+oUser.get('/', async ( ctx )=>{
   ctx.body = 'GET user!'
 }).post('/', async ( ctx )=>{
   ctx.body = 'POST user!'
@@ -12,4 +12,4 @@ user.get('/', async ( ctx )=>{
   ctx.body = 'DELETE user!'
 });
 
-export default user;
+export default oUser;
