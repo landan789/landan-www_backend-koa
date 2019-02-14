@@ -24,23 +24,33 @@ const sequelize = new Sequelize(DB.DATABASE, '', '', {
 });
 
 
-class Model {
+class CoreModel {
   table:{};
   tableName:string;
 
   constructor() {
     this.table = {};
-    this.tableName = '';
+    this.tableName = 'users';
   }
 
   show () {
-    this.table = sequelize.define(this.tableName, {
+    let Users = sequelize.define(this.tableName, {
       username: Sequelize.STRING,
       birthday: Sequelize.DATE
     });
+
+    Users.findOne({
+      where: {id: 1},
+      attributes: ['id', ['name', 'title']]
+    }).then(function(Users) {
+
+      console.log(Users);
+    })
   }
 
   add () {
     
   }
 };
+
+export default CoreModel;
