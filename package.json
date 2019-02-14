@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -x ts-node --inspect app.ts",
+    "start": "node dist/main.js",
+    "build": "tsc "
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.48",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  },
   "devDependencies": {
     "koa": "^2.7.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
