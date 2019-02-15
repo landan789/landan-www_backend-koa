@@ -4,14 +4,9 @@ import UserController from './../controllers/user';
 let oUserRouter = new Router();
 let oUserController = new UserController();
 
-oUserRouter.get('/', async ( ctx )=>{
-  oUserController.get(ctx);
-}).post('/', async ( ctx )=>{
-  oUserController.post(ctx);
-}).put('/', async ( ctx )=>{
-  oUserController.put(ctx);
-}).delete('/', async ( ctx )=>{
-  oUserController.delete(ctx);
-});
+oUserRouter.get('/', oUserController.getOne );
+oUserRouter.post('/', oUserController.postOne);
+oUserRouter.put('/', oUserController.putOne);
+oUserRouter.delete('/', oUserController.deleteOne);
 
 export default oUserRouter;

@@ -25,27 +25,31 @@ const sequelize = new Sequelize(DB.DATABASE, '', '', {
 
 
 class CoreModel {
-  table:{};
+  model:any;
   tableName:string;
+  option:{};
 
   constructor() {
-    this.table = {};
-    this.tableName = 'users';
+    this.model = {};
+    this.tableName = '';
+    this.option = {};
   }
 
-  show () {
-    let Users = sequelize.define(this.tableName, {
-      username: Sequelize.STRING,
-      birthday: Sequelize.DATE
+  async show () {
+    this.model = sequelize.define(this.tableName,{ 
+      user_id: {
+          type: Sequelize.STRING(50),
+          primaryKey: true
+      },
+      name: Sequelize.STRING(100),
+      created_time: Sequelize.BIGINT,
+      updated_time: Sequelize.BIGINT,
     });
 
-    Users.findOne({
-      where: {id: 1},
-      attributes: ['id', ['name', 'title']]
-    }).then(function(Users) {
 
-      console.log(Users);
-    })
+    let aUsers = await this.model.findAll(this.option);
+    return aUsers;
+
   }
 
   add () {
