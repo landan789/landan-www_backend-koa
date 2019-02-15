@@ -1,9 +1,9 @@
 import oCluster from 'cluster';
 import Os from 'os';
 import Koa from 'koa';
-
 import json from 'koa-json';
 
+import { requestUndefinedPath } from './middlewares';
 
 import oRouter from './routers/index';
 import { HTTP } from './configs/index';
@@ -22,10 +22,11 @@ if (oCluster.isMaster) {
 }else {
 
   const oMain = new Koa();
-  
+
   oMain.use(json({ pretty: true, param: 'pretty' }));
   oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
-  
+  oMain.use(requestUndefinedPath());
+
   oMain.listen(HTTP.PORT, () => {
     console.log('server is running')
   });
