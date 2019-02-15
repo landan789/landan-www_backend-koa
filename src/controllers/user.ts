@@ -3,22 +3,22 @@ import UserModel from './../models/users';
 let oUserModel = new UserModel();
 
 class UserController {
-  async getOne(ctx:any){
+  async getOne(oCtx:any){
 
     let aUsers = await oUserModel.show();
-    ctx.response.body = aUsers;
+    oCtx.response.body = aUsers;
 
   }
-  async postOne(oRes:any){
-    oRes.response.body = 'POST user!'
+  async postOne(oCtx:any){
+    oCtx.response.body = 'POST user!'
 
   }
-  async putOne(oRes:any){
-    oRes.body = 'PUT user!'
+  async putOne(oCtx:any){
+    oCtx.body = 'PUT user!'
 
   }
-  async deleteOne(oRes:any){
-    oRes.body = 'DELETE user!'
+  async deleteOne(oCtx:any){
+    oCtx.body = 'DELETE user!'
   }
 }
 
