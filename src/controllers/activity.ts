@@ -1,18 +1,18 @@
 
 class ActivityController {
-  get(oRes:any){
-    oRes.body = 'GET activity!'
+  get(oCtx:any){
+    oCtx.body = 'GET activity!'
   }
-  post(oRes:any){
-    oRes.body = 'POST activity!'
+  post(oCtx:any){
+    oCtx.body = 'POST activity!'
 
   }
-  put(oRes:any){
-    oRes.body = 'PUT activity!'
+  put(oCtx:any){
+    oCtx.body = 'PUT activity!'
 
   }
-  delete(oRes:any){
-    oRes.body = 'DELETE activity!'
+  delete(oCtx:any){
+    oCtx.body = 'DELETE activity!'
   }
 }
 
