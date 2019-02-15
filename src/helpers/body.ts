@@ -1,8 +1,8 @@
-import { REPONSES } from './../configs/';
+import { REPONSES } from '../configs';
 
 
 class ResponseHelper {
-  reponse (message:string, data:[]) {
+  reponse (message:string, data?:[]) {
     let oBody = {
       status: REPONSES[message].status || -1,
       code: REPONSES[message].code || 0,
