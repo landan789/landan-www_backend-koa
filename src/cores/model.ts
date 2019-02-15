@@ -52,7 +52,15 @@ class CoreModel {
 
   }
 
-  add () {
+  async add () {
+    
+  }
+
+  async modify () {
+
+  }
+
+  async remove () {
     
   }
 };
