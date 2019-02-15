@@ -1,6 +1,6 @@
 
-import _UserModel from './users';
-import _ActivityModel from './activities';
+import _UserModel from './user';
+import _ActivityModel from './activity';
 
 export { 
     _UserModel as UserModel,
