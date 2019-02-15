@@ -1,4 +1,4 @@
-const DB = {
+const DB:any = {
   USERNAME: 'backend',
   PASSWORD: 'mysql_pass_backend',
   DATABASE: 'landan',

@@ -1,13 +1,27 @@
 import { UserModel } from './../models';
+import { BodyHelper } from './../helpers';
 
 let oUserModel = new UserModel();
+let oBodyHelper = new BodyHelper();
+
 
 class UserController {
 
   async getOne(oCtx:any){
 
-    let aUsers = await oUserModel.show();
-    oCtx.response.body = aUsers;
+    try {
+      let aUsers = await oUserModel.show();
+      if (null === aUsers || undefined === aUsers) {
+        throw 'FAIL_TO_SHOW_USER';
+      }
+      
+      let oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
+      oCtx.response.body = oBody;
+    } catch (e) {
+      let oBody = oBodyHelper.reponse(e, []);
+      oCtx.response.body = oBody;
+    }
+
 
     return;
   }
