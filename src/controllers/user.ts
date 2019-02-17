@@ -9,21 +9,18 @@ class UserController {
 
   async getOne(oCtx:any){
 
+    let oBody:{} = {};
     try {
-      let aUsers = await oUserModel.show();
+      let aUsers:any = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
         throw 'FAIL_TO_SHOW_USER';
       }
-      
-      let oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
-      oCtx.response.body = oBody;
+      oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
     } catch (e) {
-      let oBody = oBodyHelper.reponse(e, []);
-      oCtx.response.body = oBody;
+      oBody = oBodyHelper.reponse(e, []);
+    } finally {
+      oCtx.response.body = oBody || oBodyHelper.reponse('UNKNON_ERROR', []);
     }
-
-
-    return;
   }
 
   async postOne(oCtx:any){

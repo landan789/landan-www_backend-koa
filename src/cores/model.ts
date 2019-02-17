@@ -1,7 +1,12 @@
 import Sequelize from 'sequelize';
+import { Model } from 'sequelize';
 
 import { DB } from './../configs/index';
 
+interface IModel {
+  user_id: string;
+  name: string;
+}
 const sequelize = new Sequelize(DB.DATABASE, '', '', {
   host: DB.HOST,
   dialect: DB.DIALECT,
@@ -25,7 +30,7 @@ const sequelize = new Sequelize(DB.DATABASE, '', '', {
 
 
 class CoreModel {
-  model:any;
+  model:Model<any, IModel>;
   tableName:string;
   option:{};
 
