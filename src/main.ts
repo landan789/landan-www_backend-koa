@@ -8,10 +8,11 @@ import { requestUndefinedPath } from './middlewares';
 import oRouter from './routers/index';
 import { HTTP, CLUSTER } from './configs/index';
 
+var argv = require('minimist')(process.argv.slice(2));
+console.dir(argv);
 const iCPULength = Os.cpus().length;
 
-console.log(process.argv);
-if (true === CLUSTER.STATUS && oCluster.isMaster) {
+if (true === CLUSTER.STATUS && oCluster.isMaster && false !== argv.cluster) {
 
   console.log(`主进程 ${process.pid} 正在运行`);
   for (let i = 0; i < iCPULength; i++) {
