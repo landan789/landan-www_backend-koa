@@ -53,3 +53,28 @@ curl 127.0.0.1:3000/
 ---------------------------------------
 
 
+[*]. 原使指令 , 打包 typescript
+```shell
+tsc 
+```
+---------------------------------------
+
+[*]. 原使指令 , 執行 打包後的 javascript
+```shell
+node dist/main.js
+```
+---------------------------------------
+
+[*]. 原使指令 , 執行 打包前的 typescript
+```shell
+node --require ts-node/register src/main.ts
+```
+---------------------------------------
+
+[*]. 原使指令 , debug 模式 執行 打包後的 javascript (會利用 sourceMap 斷點 typescript )
+```shell
+node --inspect=0.0.0.0:9229 dist/main.js
+```
+---------------------------------------
+
+

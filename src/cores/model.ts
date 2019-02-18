@@ -30,7 +30,7 @@ const sequelize = new Sequelize(DB.DATABASE, '', '', {
 
 
 class CoreModel {
-  model:Model<any, IModel>;
+  model:any;
   tableName:string;
   option:{};
 

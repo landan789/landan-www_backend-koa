@@ -10,6 +10,7 @@ class UserController {
   async getOne(oCtx:any){
 
     let oBody:{} = {};
+
     try {
       let aUsers:any = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
