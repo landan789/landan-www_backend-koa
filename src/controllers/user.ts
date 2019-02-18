@@ -12,13 +12,13 @@ class UserController {
     let oBody:{} = {};
 
     try {
-      let aUsers:any = await oUserModel.show();
+      let aUsers:[] = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
         throw 'FAIL_TO_SHOW_USER';
       }
       oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
-    } catch (e) {
-      oBody = oBodyHelper.reponse(e, []);
+    } catch (sErrorMessage) {
+      oBody = oBodyHelper.reponse(sErrorMessage);
     } finally {
       oCtx.response.body = oBody || oBodyHelper.reponse('UNKNON_ERROR', []);
     }
