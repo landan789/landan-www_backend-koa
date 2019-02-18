@@ -39,5 +39,5 @@ oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
 oMain.use(requestUndefinedPath());
 
 oMain.listen(HTTP.PORT, () => {
-  console.log('server is running')
+  console.log('server is running on port ' + HTTP.PORT);
 });

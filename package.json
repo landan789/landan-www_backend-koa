@@ -6,11 +6,11 @@
   "scripts": {
     "build": "tsc ",
     "start:js": "node dist/main.js",
-    "start:ts": "node --require ts-node/register src/main.js",
+    "start:ts": "node --require ts-node/register src/main.ts",
     "start:pm2": "pm2 start pm2.json",
     "inspect:ts": "node --inspect=0.0.0.0:9229 --require ts-node/register src/main.ts",
     "inspect:js": "node --inspect=0.0.0.0:9229 --require ts-node/register dist/main.js",
-    "watch:tsc": "tsc-watch --onSuccess 'node ./dist/main.js' --onFailure 'echo Beep! Compilation Failed' --compiler /usr/local/bin/tsc",
+    "watch:tsc": "tsc-watch --onSuccess 'node ./dist/main.js' --onFailure '[error] Compilation Failed!! ' --compiler '/usr/bin/tsc'",
     "supervisor:js": "supervisor ./dist/main.js",
     "watch:ts": "tsc -w"
   },
@@ -27,6 +27,7 @@
     "mysql2": "^1.6.5",
     "sequelize": "^4.42.0",
     "ts-node": "^8.0.2",
+    "tsc": "^1.20150623.0",
     "typescript": "^3.3.3"
   },
   "devDependencies": {
