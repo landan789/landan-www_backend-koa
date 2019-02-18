@@ -1,6 +1,7 @@
 import oCluster from 'cluster';
 import Os from 'os';
 import Koa from 'koa';
+import KoaBodyParser from 'koa-bodyparser';
 import json from 'koa-json';
 
 import { requestUndefinedPath } from './middlewares';
@@ -24,6 +25,7 @@ if (true === CLUSTER.STATUS && oCluster.isMaster && false != argv.cluster) {
 } else {
 
   const oMain = new Koa();
+  oMain.use(KoaBodyParser());
   oMain.use(json({ pretty: true, param: 'pretty' }));
   oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
   oMain.use(requestUndefinedPath());
