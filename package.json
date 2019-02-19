@@ -24,6 +24,7 @@
     "@types/koa-router": "^7.0.39",
     "@types/koa-static": "^4.0.1",
     "@types/sequelize": "^4.27.36",
+    "apollo-server": "^2.4.2",
     "graphql": "^14.1.1",
     "graphql-server-koa": "^1.4.0",
     "koa-bodyparser": "^4.2.1",
