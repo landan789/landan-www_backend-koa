@@ -1,5 +1,17 @@
 // 新版的 GraphQL UI , 比较美观
 
+
+/* 
+    POST MAN 送 
+// 1. POST http://127.0.0.1:3000
+// 2. Body raw json
+// 3. {
+	"operationName":null,
+	"variables":{},
+	"query":"{ books {   title    author  }}"
+}
+
+*/
 // const { ApolloServer, gql } = require('apollo-server');
 
 import { ApolloServer, gql } from 'apollo-server';
