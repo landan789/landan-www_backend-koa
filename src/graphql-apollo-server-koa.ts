@@ -1,7 +1,10 @@
+// 旧版的 GraphQL UI , 比较丑
+
+
 import koa from 'koa'; // koa@2
 import koaRouter from 'koa-router';
 import koaBody from 'koa-bodyparser';
-import { graphqlKoa } from 'apollo-server-koa';
+import { graphiqlKoa } from 'apollo-server-koa';
 
 const app = new koa();
 const router = new koaRouter();
@@ -12,8 +15,6 @@ app.use(koaBody());
 
 // router.post('/graphql', graphqlKoa({ schema: myGraphQLSchema }));
 // router.get('/graphql', graphqlKoa({ schema: myGraphQLSchema }));
-
-import { graphiqlKoa } from 'apollo-server-koa';
 
 // Setup the /graphiql route to show the GraphiQL UI
 router.get(

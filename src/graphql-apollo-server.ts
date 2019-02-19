@@ -1,4 +1,8 @@
-const { ApolloServer, gql } = require('apollo-server');
+// 新版的 GraphQL UI , 比较美观
+
+// const { ApolloServer, gql } = require('apollo-server');
+
+import { ApolloServer, gql } from 'apollo-server';
 
 // This is a (sample) collection of books we'll be able to query
 // the GraphQL server for.  A more complete example might fetch
