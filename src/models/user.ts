@@ -13,6 +13,9 @@ class UserModel extends CoreModel {
 
     
   }
+
+  async show () {
+  }
 }
 
 export default UserModel;

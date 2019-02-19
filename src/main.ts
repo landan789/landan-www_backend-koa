@@ -2,6 +2,7 @@ import oCluster from 'cluster';
 import Os from 'os';
 import Koa from 'koa';
 import KoaBodyParser from 'koa-bodyparser';
+import KoaStatic from 'koa-static';
 import json from 'koa-json';
 
 import { requestUndefinedPath } from './middlewares';
@@ -28,9 +29,10 @@ if (true === CLUSTER.STATUS && oCluster.isMaster && false != argv.cluster) {
 
   const oMain = new Koa();
   oMain.use(KoaBodyParser());
+  oMain.use(KoaStatic(__dirname + '/public'));
   oMain.use(json({ pretty: true, param: 'pretty' }));
   oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
-  oMain.use(requestUndefinedPath());
+  //oMain.use(requestUndefinedPath());
   
   oMain.listen(HTTP.PORT, () => {
     console.log('server is running on port ' + HTTP.PORT);

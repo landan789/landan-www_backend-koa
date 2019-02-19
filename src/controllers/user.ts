@@ -12,7 +12,7 @@ class UserController {
     let oBody:{} = {};
 
     try {
-      let aUsers:[] = await oUserModel.show();
+      let aUsers:any = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
         throw 'FAIL_TO_SHOW_USER';
       }
