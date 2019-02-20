@@ -20,7 +20,7 @@ class UserController {
     } catch (sErrorMessage) {
       oBody = oBodyHelper.reponse(sErrorMessage);
     } finally {
-      oCtx.response.body = oBody || oBodyHelper.reponse('UNKNON_ERROR', []);
+      oCtx.response.body = oBody || oBodyHelper.reponse('IS_UNKNOWN_ERROR', []);
     }
   }
 
