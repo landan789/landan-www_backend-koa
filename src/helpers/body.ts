@@ -4,9 +4,9 @@ import { REPONSES } from '../configs';
 class ResponseHelper {
   reponse (message:string, data?:[]) {
     let oBody = {
-      status: REPONSES[message].status || -1,
-      code: REPONSES[message].code || 0,
-      message: REPONSES[message].message || '',
+      status: REPONSES[message].STATUS || -1,
+      code: REPONSES[message].CODE || 0,
+      message: REPONSES[message].MESSAGE || '',
       data: data || []
     }
     return oBody;
