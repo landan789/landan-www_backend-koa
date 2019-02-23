@@ -4,7 +4,7 @@ let oBodyHelper = new BodyHelper();
 
 function requestUndefinedPath () {
   return async (oCtx:any, fNext:()=>{} ) => {
-    let oBody = oBodyHelper.reponse('REQUEST_UNDEFINED_PATH');
+    let oBody = oBodyHelper.reponse('IT_REQUESTS_UNDEFINED_PATH');
     oCtx.response.body = oBody;
     await fNext();
   }
