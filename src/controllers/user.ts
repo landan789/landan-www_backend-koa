@@ -16,7 +16,7 @@ class UserController {
       if (null === aUsers || undefined === aUsers) {
         throw 'FAIL_TO_SHOW_USER';
       }
-      oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
+      oBody = oBodyHelper.reponse('IT_SUCCEDS_TO_SHOW_USER', aUsers);
     } catch (sErrorMessage) {
       oBody = oBodyHelper.reponse(sErrorMessage);
     } finally {
