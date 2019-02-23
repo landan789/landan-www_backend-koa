@@ -14,7 +14,7 @@ class UserController {
     try {
       let aUsers:any = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
-        throw 'FAIL_TO_SHOW_USER';
+        throw 'IT_FAILS_TO_SHOW_USER';
       }
       oBody = oBodyHelper.reponse('IT_SUCCEDS_TO_SHOW_USER', aUsers);
     } catch (sErrorMessage) {
