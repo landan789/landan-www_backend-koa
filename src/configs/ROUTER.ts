@@ -1,5 +1,5 @@
 const ROUTER:any = {
-  'PREFIX': '/www'
+  'PREFIX': '/www/resource'
 };
 
 export default ROUTER;
