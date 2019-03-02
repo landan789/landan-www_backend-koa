@@ -4,12 +4,12 @@ import Koa from 'koa';
 import KoaBodyParser from 'koa-bodyparser';
 import json from 'koa-json';
 
-import { NonexistentURI } from './middleware';
+import { NonexistentURIMiddleware } from './middleware';
 
 import oRouter from './routers/index';
 import { HTTP, CLUSTER } from './configs/index';
 
-let oNonexistentURI = new NonexistentURI();
+let oNonexistentURIMiddleware = new NonexistentURIMiddleware();
 var argv = require('minimist')(process.argv.slice(2));
 console.dir(argv);
 const iCPULength = Os.cpus().length;
@@ -29,7 +29,7 @@ if (true === CLUSTER.STATUS && oCluster.isMaster && false != argv.cluster) {
   oMain.use(KoaBodyParser());
   oMain.use(json({ pretty: true, param: 'pretty' }));
   oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
-  oMain.use(oNonexistentURI.handle());
+  oMain.use(oNonexistentURIMiddleware.handle());
   
   oMain.listen(HTTP.PORT, () => {
     console.log('server is running on port ' + HTTP.PORT);

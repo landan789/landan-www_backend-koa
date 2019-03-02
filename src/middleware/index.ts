@@ -1,5 +1,5 @@
-import _NonexistentURI from './NonexistentURI';
+import _NonexistentURIMiddleware from './NonexistentURI';
 
 export { 
-    _NonexistentURI as NonexistentURI
+    _NonexistentURIMiddleware as NonexistentURIMiddleware
 };
