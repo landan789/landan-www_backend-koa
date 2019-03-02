@@ -1,5 +1,5 @@
-import { UserModel } from './../models';
-import { BodyHelper } from './../helpers';
+import { UserModel } from '../../models';
+import { BodyHelper } from '../../helpers';
 
 let oUserModel = new UserModel();
 let oBodyHelper = new BodyHelper();
