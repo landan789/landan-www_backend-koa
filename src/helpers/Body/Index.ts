@@ -1,7 +1,7 @@
 import { REPONSES } from '../../configs';
 
 
-class ResponseHelper {
+class BodyHelper {
   reponse (message:string, data?:[]) {
     let oBody = {
       status: REPONSES[message].status || -1,
@@ -16,4 +16,4 @@ class ResponseHelper {
   }
 };
 
-export default ResponseHelper;
+export default BodyHelper;
