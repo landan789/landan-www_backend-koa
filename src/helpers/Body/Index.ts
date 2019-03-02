@@ -9,7 +9,7 @@ class ResponseHelper {
       message: REPONSES[message].message || '',
       jwt: '',
       total_count: 0,
-      data: data || []
+      data: data || {}
     }
     return oBody;
 
