@@ -14,7 +14,7 @@ class UserController {
     try {
       let aUsers:[] = await oUserModel.show();
       if (null === aUsers || undefined === aUsers) {
-        throw 'FAIL_TO_SHOW_USER';
+        throw 'IT_FAIL_TO_SHOW_USER';
       }
       let oData = {
         users: aUsers

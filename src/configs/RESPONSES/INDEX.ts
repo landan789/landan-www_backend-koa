@@ -17,11 +17,11 @@ const RESPONSEES: any = {
     CODE: -1, 
     MESSAGE: 'it requests nonexistent URI'
   },
-  'FAIL_TO_SHOW_USER': {
+  'IT_FAIL_TO_SHOW_USER': {
     STATUS: 500,
     RESULT: -1, 
     CODE: -3, 
-    MESSAGE: 'fail to show user'
+    MESSAGE: 'it fails to show user'
   }
 };
 
