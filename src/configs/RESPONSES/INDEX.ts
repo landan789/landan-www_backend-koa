@@ -1,15 +1,15 @@
 const RESPONSEES: any = {
-  'SUCCED_TO_SHOW_USER': {
+  'IT_SUCCEDS_TO_SHOW_USER': {
     STATUS: 200,
     RESULT: 1, 
     CODE: 0, 
-    MESSAGE: 'succed to show user'
+    MESSAGE: 'it succeds to show user'
   },
-  'UNKNON_ERROR': { 
+  'IT_IS_UNKNON_ERROR': { 
     STATUS: 500,
     RESULT: -1, 
     CODE: -1, 
-    MESSAGE: 'unknown error'
+    MESSAGE: 'it is unknown error'
   },
   'REQUEST_NONEXISTENT_URI': {
     STATUS: 501,

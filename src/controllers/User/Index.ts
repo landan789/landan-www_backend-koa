@@ -19,11 +19,11 @@ class UserController {
       let oData = {
         users: aUsers
       };
-      oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', oData);
+      oBody = oBodyHelper.reponse('IT_SUCCEDS_TO_SHOW_USER', oData);
     } catch (sErrorMessage) {
       oBody = oBodyHelper.reponse(sErrorMessage);
     } finally {
-      oCtx.response.body = oBody || oBodyHelper.reponse('UNKNON_ERROR', []);
+      oCtx.response.body = oBody || oBodyHelper.reponse('IT_IS_UNKNON_ERROR', {});
     }
   }
 
