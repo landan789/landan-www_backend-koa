@@ -1,4 +1,4 @@
-import _BodyHelper from './body';
+import _BodyHelper from './Body/Index';
 
 export { 
     _BodyHelper as BodyHelper

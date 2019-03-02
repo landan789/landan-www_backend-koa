@@ -1,4 +1,4 @@
-import { REPONSES } from '../configs';
+import { REPONSES } from '../../configs';
 
 
 class ResponseHelper {
