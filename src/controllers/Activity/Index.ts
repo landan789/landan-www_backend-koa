@@ -1,17 +1,17 @@
 
 class ActivityController {
-  async get(oCtx: any) {
+  async getShow(oCtx: any) {
     oCtx.body = 'GET activity!'
   }
-  async post(oCtx: any) {
+  async postAdd(oCtx: any) {
     oCtx.body = 'POST activity!'
 
   }
-  async put(oCtx: any) {
+  async putEdit(oCtx: any) {
     oCtx.body = 'PUT activity!'
 
   }
-  async delete(oCtx: any) {
+  async deleteRemove(oCtx: any) {
     oCtx.body = 'DELETE activity!'
   }
 }

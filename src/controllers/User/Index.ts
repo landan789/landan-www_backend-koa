@@ -7,7 +7,7 @@ let oBodyHelper = new BodyHelper();
 
 class UserController {
 
-  async getOne(oCtx:any){
+  async getShow(oCtx:any){
 
     let oBody:{} = {};
 
@@ -16,7 +16,10 @@ class UserController {
       if (null === aUsers || undefined === aUsers) {
         throw 'FAIL_TO_SHOW_USER';
       }
-      oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', aUsers);
+      let oData = {
+        users: aUsers
+      };
+      oBody = oBodyHelper.reponse('SUCCED_TO_SHOW_USER', oData);
     } catch (sErrorMessage) {
       oBody = oBodyHelper.reponse(sErrorMessage);
     } finally {
@@ -24,19 +27,19 @@ class UserController {
     }
   }
 
-  async postOne(oCtx:any){
+  async postAdd(oCtx:any){
 
     oCtx.response.body = 'POST user!'
 
   }
 
-  async putOne(oCtx:any){
+  async putEdit(oCtx:any){
 
     oCtx.body = 'PUT user!'
 
   }
 
-  async deleteOne(oCtx:any){
+  async deleteRemove(oCtx:any){
 
     oCtx.body = 'DELETE user!'
   }

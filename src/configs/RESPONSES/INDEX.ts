@@ -1,8 +1,24 @@
-const REPONSEES:any = {
-  'SUCCED_TO_SHOW_USER': { status: 1, code: 0, message: 'succed to show user'},
-  'UNKNON_ERROR': { status: -1, code: -1, message: 'unknown error'},
-  'REQUEST_NONEXISTENT_URI': { status: -2, code: -1, message: 'request nonexistent URI'},
-  'FAIL_TO_SHOW_USER': { status: -1, code: -3, message: 'fail to show user'}
+const RESPONSEES: any = {
+  'SUCCED_TO_SHOW_USER': { 
+    RESULT: 1, 
+    CODE: 0, 
+    MESSAGE: 'succed to show user'
+  },
+  'UNKNON_ERROR': { 
+    RESULT: -1, 
+    CODE: -1, 
+    MESSAGE: 'unknown error'
+  },
+  'REQUEST_NONEXISTENT_URI': { 
+    RESULT: -2, 
+    CODE: -1, 
+    MESSAGE: 'request nonexistent URI'
+  },
+  'FAIL_TO_SHOW_USER': { 
+    RESULT: -1, 
+    CODE: -3, 
+    MESSAGE: 'fail to show user'
+  }
 };
 
-export default REPONSEES;
+export default RESPONSEES;

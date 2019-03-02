@@ -1,4 +1,4 @@
-import CoreModel from '../../cores/model';
+import CoreModel from '../../cores/Model/Index';
 
 class ActivityModel extends CoreModel {
   constructor(){

@@ -2,11 +2,11 @@ import { RESPONSES } from '../../configs';
 
 
 class BodyHelper {
-  reponse (message:string, data?:[]) {
+  reponse (message:string, data?: {}) {
     let oBody = {
-      status: RESPONSES[message].status || -1,
-      code: RESPONSES[message].code || 0,
-      message: RESPONSES[message].message || '',
+      result: RESPONSES[message].RESULT || -1,
+      code: RESPONSES[message].CODE || 0,
+      message: RESPONSES[message].MESSAGE || '',
       jwt: '',
       total_count: 0,
       data: data || {}

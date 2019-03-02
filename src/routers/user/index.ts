@@ -4,9 +4,9 @@ import { UserController } from './../../controllers/index';
 let oUserRouter = new Router();
 let oUserController = new UserController();
 
-oUserRouter.get('/', oUserController.getOne );
-oUserRouter.post('/', oUserController.postOne);
-oUserRouter.put('/', oUserController.putOne);
-oUserRouter.delete('/', oUserController.deleteOne);
+oUserRouter.get('/', oUserController.getShow);
+oUserRouter.post('/', oUserController.postAdd);
+oUserRouter.put('/', oUserController.putEdit);
+oUserRouter.delete('/', oUserController.deleteRemove);
 
 export default oUserRouter;
