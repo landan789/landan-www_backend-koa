@@ -1,5 +1,6 @@
+import { BaseActivityController } from './Base';
 
-class ActivityController {
+class ActivityController extends BaseActivityController{
   async getShow(oCtx: any) {
     oCtx.body = 'GET activity!'
   }
