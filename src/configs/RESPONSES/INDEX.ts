@@ -11,11 +11,11 @@ const RESPONSEES: any = {
     CODE: -1, 
     MESSAGE: 'it is unknown error'
   },
-  'REQUEST_NONEXISTENT_URI': {
+  'IT_REQUESTS_NONEXISTENT_URI': {
     STATUS: 501,
     RESULT: -2, 
     CODE: -1, 
-    MESSAGE: 'request nonexistent URI'
+    MESSAGE: 'it requests nonexistent URI'
   },
   'FAIL_TO_SHOW_USER': {
     STATUS: 500,
