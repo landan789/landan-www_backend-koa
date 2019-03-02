@@ -1,9 +1,9 @@
-import C_HTTP from './HTTP';
-import C_CLUSTER from './CLUSTER';
-import C_DB from './DB';
-import C_ROUTER from './ROUTER';
-import C_PATHS from './PATHS';
-import C_REPONSES from './RESPONSES';
+import C_HTTP from './HTTP/INDEX';
+import C_CLUSTER from './CLUSTER/INDEX';
+import C_DB from './DB/INDEX';
+import C_ROUTER from './ROUTER/INDEX';
+import C_PATHS from './PATHS/INDEX';
+import C_RESPONSES from './RESPONSES/INDEX';
 
 export { 
     C_HTTP as HTTP,
@@ -11,5 +11,5 @@ export {
     C_DB as DB,
     C_ROUTER as ROUTER,
     C_PATHS as PATHS,
-    C_REPONSES as REPONSES
+    C_RESPONSES as RESPONSES
 };
