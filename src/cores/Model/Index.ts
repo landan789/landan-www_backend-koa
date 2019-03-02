@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 import { Model } from 'sequelize';
 
-import { DB } from './../configs/index';
+import { DB } from '../../configs/index';
 
 interface IModel {
   user_id: string;
@@ -61,7 +61,7 @@ class CoreModel {
     
   }
 
-  async modify () {
+  async edit () {
 
   }
 

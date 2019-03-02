@@ -1,6 +1,6 @@
 
-import _CoreModel from './model';
-import _CoreController from './controller';
+import _CoreModel from './Model/Index';
+import _CoreController from './Controller/Index';
 
 export { 
     _CoreModel as CoreModel,
