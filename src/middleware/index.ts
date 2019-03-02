@@ -1,5 +1,5 @@
-import _RequestUndefinedPath from './requestUndefinedPath';
+import _NonexistentURI from './NonexistentURI';
 
 export { 
-    _RequestUndefinedPath as RequestUndefinedPath
+    _NonexistentURI as NonexistentURI
 };

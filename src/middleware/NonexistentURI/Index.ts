@@ -2,7 +2,7 @@ import { BodyHelper } from './../../helpers';
 
 let oBodyHelper = new BodyHelper();
 
-class RequestUndefinedPath {
+class NonexistentURI {
   handle () {
     return async (oCtx:any, fNext:()=>{} ) => {
       let oBody = oBodyHelper.reponse('REQUEST_UNDEFINED_PATH');
@@ -11,4 +11,4 @@ class RequestUndefinedPath {
     }
   }
 }
-export default RequestUndefinedPath;
+export default NonexistentURI;
