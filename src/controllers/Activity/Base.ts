@@ -8,3 +8,5 @@ class BaseActivityController extends CoreController {
 export {
   BaseActivityController as BaseActivityController
 };
+
+// 使用 ts, import { BaseActivityController } from './Base'; export 方式要改 
