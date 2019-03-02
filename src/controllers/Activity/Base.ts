@@ -1,7 +1,10 @@
 import { CoreController } from './../../cores';
 
-export class BaseActivityController extends CoreController {
+class BaseActivityController extends CoreController {
   constructor(){
     super();
   }
+};
+export {
+  BaseActivityController as BaseActivityController
 };
