@@ -1,5 +1,4 @@
-import { CoreModel } from '../cores/';
-
+import { CoreModel } from '../../cores';
 
 class UserModel extends CoreModel {
   constructor(){

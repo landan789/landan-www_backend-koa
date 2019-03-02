@@ -4,11 +4,12 @@ import Koa from 'koa';
 import KoaBodyParser from 'koa-bodyparser';
 import json from 'koa-json';
 
-import { requestUndefinedPath } from './middlewares';
+import { RequestUndefinedPath } from './middleware';
 
 import oRouter from './routers/index';
 import { HTTP, CLUSTER } from './configs/index';
 
+let oRequestUndefinedPath = new RequestUndefinedPath();
 var argv = require('minimist')(process.argv.slice(2));
 console.dir(argv);
 const iCPULength = Os.cpus().length;
@@ -28,7 +29,7 @@ if (true === CLUSTER.STATUS && oCluster.isMaster && false != argv.cluster) {
   oMain.use(KoaBodyParser());
   oMain.use(json({ pretty: true, param: 'pretty' }));
   oMain.use(oRouter.routes()).use(oRouter.allowedMethods());
-  oMain.use(requestUndefinedPath());
+  oMain.use(oRequestUndefinedPath.handle());
   
   oMain.listen(HTTP.PORT, () => {
     console.log('server is running on port ' + HTTP.PORT);
